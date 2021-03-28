@@ -28,6 +28,6 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
     - name: Pack
-      run: dotnet pack ./src/SpreadsheetWriter.Abstractions/SpreadsheetWriter.Abstractions.csproj --no-build --configuration Release -Version ${{ steps.tag_version.outputs.new_tag }}
+      run: dotnet pack ./src/SpreadsheetWriter.Abstractions/SpreadsheetWriter.Abstractions.csproj --no-build --configuration Release -Version ${{ steps.tag_version.outputs.new_version }}
     - name: Publish
       run: dotnet nuget push "./src/SpreadsheetWriter.Abstractions/bin/Release/SpreadsheetWriter.Abstractions.*.nupkg" --source https://nuget.pkg.github.com/wouterfennis/index.json --api-key ${{ secrets.GITHUB_TOKEN }} --skip-duplicate
