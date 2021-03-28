@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpreadsheetWriter.Abstractions", "src\SpreadsheetWriter.Abstractions\SpreadsheetWriter.Abstractions.csproj", "{BED4673F-BED0-4004-84AC-75490BC5661E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BED4673F-BED0-4004-84AC-75490BC5661E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED4673F-BED0-4004-84AC-75490BC5661E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED4673F-BED0-4004-84AC-75490BC5661E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED4673F-BED0-4004-84AC-75490BC5661E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A0588AD-BA84-4195-AEB2-6E4BBB9D355B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A0588AD-BA84-4195-AEB2-6E4BBB9D355B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A0588AD-BA84-4195-AEB2-6E4BBB9D355B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A0588AD-BA84-4195-AEB2-6E4BBB9D355B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D78A559B-EC55-48C5-BE65-3C9FA1895456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D78A559B-EC55-48C5-BE65-3C9FA1895456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D78A559B-EC55-48C5-BE65-3C9FA1895456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D78A559B-EC55-48C5-BE65-3C9FA1895456}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B68F0EC-514B-4A7F-80D9-BC50268933A7}
+	EndGlobalSection
+EndGlobal
