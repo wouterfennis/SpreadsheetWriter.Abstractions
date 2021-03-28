@@ -1,24 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Description>An abstraction library to make SpreadsheetWriter open to new implementations and make it more testable on the client side.</Description>
-    <PackageProjectUrl>https://github.com/wouterfennis/SpreadsheetWriter</PackageProjectUrl>
-    <PackageTags>Spreadsheet, Excel, OpenOffice, EPPlus, Interface</PackageTags>
-    <PackageReleaseNotes>Initial version</PackageReleaseNotes>
-    <NeutralLanguage>en-US</NeutralLanguage>
-    <PackageLicenseExpression></PackageLicenseExpression>
-    <Authors>Wouter Fennis</Authors>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <RepositoryUrl>https://github.com/wouterfennis/SpreadsheetWriter</RepositoryUrl>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<Description>An abstraction library to make SpreadsheetWriter open to new implementations and make it more testable on the client side.</Description>
+		<PackageProjectUrl>https://github.com/wouterfennis/SpreadsheetWriter</PackageProjectUrl>
+		<PackageTags>Spreadsheet, Excel, OpenOffice, EPPlus, Interface</PackageTags>
+		<PackageReleaseNotes>Initial version</PackageReleaseNotes>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<PackageLicenseExpression></PackageLicenseExpression>
+		<Authors>Wouter Fennis</Authors>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<RepositoryUrl>https://github.com/wouterfennis/SpreadsheetWriter.Abstractions</RepositoryUrl>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Include="..\..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>
