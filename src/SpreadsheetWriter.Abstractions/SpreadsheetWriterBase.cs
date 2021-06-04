@@ -1,7 +1,7 @@
-﻿using System.Drawing;
-using SpreadsheetWriter.Abstractions.Cell;
+﻿using SpreadsheetWriter.Abstractions.Cell;
 using SpreadsheetWriter.Abstractions.Formula;
 using SpreadsheetWriter.Abstractions.Styling;
+using System.Drawing;
 
 namespace SpreadsheetWriter.Abstractions
 {
@@ -12,6 +12,8 @@ namespace SpreadsheetWriter.Abstractions
         private const float DefaultFontSize = 11;
         private const bool DefaultIsFontBold = false;
         private const string DefaultFormat = "";
+        private const HorizontalAlignment DefaultHorizontalAlignment = HorizontalAlignment.General;
+        private const VerticalAlignment DefaultVerticalAlignment = VerticalAlignment.Top;
         private const BorderStyle DefaultBorderStyle = BorderStyle.None;
         private const BorderDirection DefaultBorderDirection = BorderDirection.None;
 
@@ -28,6 +30,8 @@ namespace SpreadsheetWriter.Abstractions
         protected bool IsCurrentFontBold;
         protected int CurrentTextRotation;
         protected string CurrentFormat;
+        protected HorizontalAlignment CurrentHorizontalAlignment;
+        protected VerticalAlignment CurrentVerticalAlignment;
         protected BorderStyle CurrentBorderStyle;
         protected BorderDirection CurrentBorderDirection;
 
@@ -157,6 +161,20 @@ namespace SpreadsheetWriter.Abstractions
         }
 
         /// <inheritdoc/>
+        public ISpreadsheetWriter SetHorizontalAlignment(HorizontalAlignment horizontalAlignment)
+        {
+            CurrentHorizontalAlignment = horizontalAlignment;
+            return this;
+        }
+
+        /// <inheritdoc/>
+        public ISpreadsheetWriter SetVerticalAlignment(VerticalAlignment verticalAlignment)
+        {
+            CurrentVerticalAlignment = verticalAlignment;
+            return this;
+        }
+
+        /// <inheritdoc/>
         public ISpreadsheetWriter SetBorder(BorderStyle borderStyle, BorderDirection borderDirection, Color borderColor)
         {
             CurrentBorderStyle = borderStyle;
@@ -182,6 +200,9 @@ namespace SpreadsheetWriter.Abstractions
             CurrentFontSize = DefaultFontSize;
             IsCurrentFontBold = DefaultIsFontBold;
             CurrentFormat = DefaultFormat;
+            CurrentHorizontalAlignment = DefaultHorizontalAlignment;
+            CurrentVerticalAlignment = DefaultVerticalAlignment;
+            CurrentFormat = DefaultFormat;
             CurrentBorderStyle = DefaultBorderStyle;
             CurrentBorderDirection = DefaultBorderDirection;
 
@@ -193,6 +214,9 @@ namespace SpreadsheetWriter.Abstractions
 
         /// <inheritdoc/>
         public abstract ISpreadsheetWriter Write(string value);
+
+        /// <inheritdoc/>
+        public abstract ISpreadsheetWriter PlaceLessThanRule(double lessThanValue, Color fillColor);
 
         /// <inheritdoc/>
         public abstract ISpreadsheetWriter PlaceStandardFormula(Point startPosition, Point endPosition, FormulaType formulaType);

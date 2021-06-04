@@ -1,7 +1,7 @@
-﻿using System.Drawing;
-using SpreadsheetWriter.Abstractions.Cell;
+﻿using SpreadsheetWriter.Abstractions.Cell;
 using SpreadsheetWriter.Abstractions.Formula;
 using SpreadsheetWriter.Abstractions.Styling;
+using System.Drawing;
 
 namespace SpreadsheetWriter.Abstractions
 {
@@ -91,6 +91,16 @@ namespace SpreadsheetWriter.Abstractions
         ISpreadsheetWriter SetFormat(string format);
 
         /// <summary>
+        /// Set the horizontal alignment for future inserts to a specified alignment.
+        /// </summary>
+        ISpreadsheetWriter SetHorizontalAlignment(HorizontalAlignment horizontalAlignment);
+
+        /// <summary>
+        /// Set the vertical alignment for future inserts to a specified alignment.
+        /// </summary>
+        ISpreadsheetWriter SetVerticalAlignment(VerticalAlignment verticalAlignment);
+
+        /// <summary>
         /// Set the border for future inserts to a specified style and direction.
         /// </summary>
         ISpreadsheetWriter SetBorder(BorderStyle borderStyle, BorderDirection borderDirection, Color borderColor);
@@ -114,6 +124,11 @@ namespace SpreadsheetWriter.Abstractions
         /// Write a string value in the current selected cell.
         /// </summary>
         ISpreadsheetWriter Write(string value);
+
+        /// <summary>
+        /// Create a Less Than Rule on the current select cell.
+        /// </summary>
+        ISpreadsheetWriter PlaceLessThanRule(double lessThanValue, Color fillColor);
 
         /// <summary>
         /// Place the outcome of a standard formula in the spreadsheet at the current position.
