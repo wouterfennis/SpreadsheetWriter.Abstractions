@@ -111,6 +111,11 @@ namespace SpreadsheetWriter.Abstractions
         ISpreadsheetWriter NewLine();
 
         /// <summary>
+        /// Only apply the setup styling to the current selected cell.
+        /// </summary>
+        ISpreadsheetWriter ApplyStyling();
+
+        /// <summary>
         /// Resets any configured styling to the default values.
         /// </summary>
         ISpreadsheetWriter ResetStyling();

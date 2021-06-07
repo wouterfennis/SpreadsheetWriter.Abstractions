@@ -191,6 +191,9 @@ namespace SpreadsheetWriter.Abstractions
         }
 
         /// <inheritdoc/>
+        public abstract ISpreadsheetWriter ApplyStyling();
+
+        /// <inheritdoc/>
         public ISpreadsheetWriter ResetStyling()
         {
             CurrentBackgroundColor = DefaultBackgroundColor;
